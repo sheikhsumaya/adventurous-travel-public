@@ -19,7 +19,7 @@ const Offer = ({offer}) => {
         <h6 className='mt-4'><small>{description}</small>
         <br />
         </h6>
-        <button onClick={() =>offerDetail(id)} type="button" class="btn btn-secondary my-4 ms-5 me-0 btn-text">Book Now</button>
+        <button onClick={() =>offerDetail(id)} type="button" className="btn btn-secondary my-4 ms-5 me-0 btn-text">Book Now</button>
         </div>
       </div>
 

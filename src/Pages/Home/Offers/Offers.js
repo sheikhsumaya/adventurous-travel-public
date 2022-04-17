@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
 import Offer from '../Offer/Offer';
 import './Offers.css'
 
