@@ -1,0 +1,9 @@
+.guider-name{
+  text-align: center;
+  color: rgba(11, 11, 94, 0.901);
+  font-weight: 600;
+  background-image: linear-gradient(rgba(186, 176, 142, 0.489),rgba(78, 143, 140, 0.543));
+}
+.guider-box{
+  border-radius: 20px;
+}

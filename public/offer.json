@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Singapore",
+    "price": "2100",
+    "url": "https://images.pexels.com/photos/2499786/pexels-photo-2499786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Tour for 14Days & 15 Nights with  stisfying facilities."
+  },
+  {
+    "id": 2,
+    "name": "London",
+    "price": "3200",
+    "url": "https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Tour for 12Days & 13 Nights with  stisfying facilities."
+  },
+    
+  {
+    "id": 3,
+    "name": "Turkey",
+    "price": "2700",
+    "url": "https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Tour for 17Days & 18 Nights with  stisfying facilities."
+    
+  },
+  {
+    "id": 4,
+    "name": "Dubai",
+    "price": "2500",
+    "url": "https://images.pexels.com/photos/325193/pexels-photo-325193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Tour for 15Days & 16 Nights with  stisfying facilities."
+  },
+  {
+    "id": 5,
+    "name": "New York",
+    "price": "23000",
+    "url": "https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Tour for 13Days & 14 Nights with stisfying facilities."
+  },
+  {
+    "id": 6,
+    "name": "Thailand",
+    "price": "30000",
+    "url": "https://images.pexels.com/photos/460376/pexels-photo-460376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Tour for 10Days & 11 Nights with stisfying facilities."
+  }
+]

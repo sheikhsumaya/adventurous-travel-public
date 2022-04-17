@@ -1,0 +1,14 @@
+.btn-text{
+   width: 200px;
+   justify-content: center;
+   background-color: rgba(64, 49, 98, 0.89); 
+   margin-left: 10px;
+
+}
+.offer-text{
+   margin: auto;
+   color: rgba(64, 49, 98, 0.89);
+}
+.offer-box{
+   border-radius: 20px;
+}

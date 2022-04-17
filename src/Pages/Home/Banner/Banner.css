@@ -1,0 +1,5 @@
+.bnr-text{
+  color: rgba(64, 49, 98, 0.89);
+  background-image: linear-gradient(rgba(110, 75, 135, 0.489),rgba(78, 143, 140, 0.543));
+  border-radius: 20px;
+}

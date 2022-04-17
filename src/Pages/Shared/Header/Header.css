@@ -1,0 +1,10 @@
+.nav-bar{
+  background-color: rgba(38, 3, 70, 0.857);
+  color: rgb(160, 178, 178);
+}
+.nav-bar img{
+  height: 80px;
+  width: 150px;
+  border-radius: 100px;
+  margin-right: 30px;
+}

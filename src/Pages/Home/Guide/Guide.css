@@ -1,0 +1,14 @@
+.card img{
+  height: 700px;
+  border-radius: 20px;
+}
+.card-guide{
+  border: 3px solid rgba(64, 49, 98, 0.89);
+  border-radius: 20px;
+}
+.name{
+  text-align: center;
+  margin: 10px;
+  color: rgba(38, 37, 87, 0.774);
+  font-weight: 700;
+}
