@@ -16,8 +16,7 @@ const Header = () => {
   return (
     <div>
       <div>
-        <Navbar
-          sticky="top"
+        <Navbar fixed="top"
           className="nav-bar"
           collapseOnSelect
           expand="lg"
