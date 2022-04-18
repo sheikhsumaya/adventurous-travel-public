@@ -1,0 +1,8 @@
+.about{
+  border: 2px solid black;
+  padding: 130px;
+  margin: 30px 30px 20px 20px;
+}
+.about img{
+  width: 300px;
+}

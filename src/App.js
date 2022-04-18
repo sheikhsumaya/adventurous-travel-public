@@ -11,16 +11,19 @@ import Package from './Pages/Package/Package';
 import Login from './Form/Login/Login';
 import Register from './Form/Register/Register';
 import CheckOut from './Pages/CheckOut/CheckOut/CheckOut';
-import RequiredAuth from './Form/RequiredAuth/RequiredAuth'
+import RequiredAuth from './Form/RequiredAuth/RequiredAuth';
+import Blog from '../src/Pages/Blog/Blog'
 
 function App() {
   return (
     <div>
+      {/* Here are routes and header */}
       <Header></Header>
       <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/home' element={<Home></Home>}></Route>
           <Route path='/about' element={<About></About>}></Route>
+          <Route path='/blog' element={<Blog></Blog>}></Route>
           <Route path='/package/:packageId' element={<Package></Package>}></Route>
           <Route path='/offers' element={<Offers></Offers>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
@@ -29,7 +32,6 @@ function App() {
             <CheckOut></CheckOut>
            </RequiredAuth>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
-          {/* <Route path='' element={}></Route> */}
       </Routes>
       <Footer></Footer>
     </div>
