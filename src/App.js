@@ -10,6 +10,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Package from './Pages/Package/Package';
 import Login from './Form/Login/Login';
 import Register from './Form/Register/Register';
+import CheckOut from './Pages/CheckOut/CheckOut/CheckOut';
+import RequiredAuth from './Form/RequiredAuth/RequiredAuth'
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
           <Route path='/offers' element={<Offers></Offers>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
-          
+           <Route path='/checkout' element={<RequiredAuth>
+            <CheckOut></CheckOut>
+           </RequiredAuth>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
           {/* <Route path='' element={}></Route> */}
       </Routes>
