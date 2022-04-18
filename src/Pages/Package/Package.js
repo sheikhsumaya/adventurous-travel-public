@@ -5,7 +5,7 @@ const Package = () => {
   const { packageId } = useParams();
   return (
     <div>
-      <h1>Package{packageId}</h1>
+      <h1 className="text-center">Package{packageId}</h1>
       <div className="text-center">
         <Link to="/checkout">
           <button className="btn btn-primary">Proceed Checkout</button>
