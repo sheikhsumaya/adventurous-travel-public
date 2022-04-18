@@ -1,52 +1,50 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
+import {
+  useAuthState,
+  useCreateUserWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import SocialLogin from "../Login/SocialLogin/SocialLogin";
 
 const Register = () => {
+  const [agree, setAgree] = useState(false);
 
-  const [
-    createUserWithEmailAndPassword,
-    user,
-    loading,
-    error,
-  ] = useCreateUserWithEmailAndPassword(auth);
-  
-  const nameRef = useRef('');
-  const emailRef = useRef('');
-  const passwordRef = useRef('');
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
-  const navigate =useNavigate();
+  const nameRef = useRef("");
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
 
-  const navigateLogin = () =>{
-    navigate('/login')
+  const navigate = useNavigate();
+
+  const navigateLogin = () => {
+    navigate("/login");
+  };
+
+  if (user) {
+    navigate("/home");
   }
 
-  if(user){
-    navigate('/home');
-  }
-
-  const handleRegister = event =>{
+  const handleRegister = (event) => {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    
-    createUserWithEmailAndPassword( email, password);
-  
-  }
+
+    if (agree) {
+      createUserWithEmailAndPassword(email, password);
+    }
+  };
 
   return (
     <div className="container w-75 mx-auto pb-5 my-5">
       <h1 className="text-center login-text my-5">Register Here!</h1>
       <Form onSubmit={handleRegister}>
         <Form.Label htmlFor="name">Username</Form.Label>
-        <Form.Control
-          ref={nameRef}
-          type="text"
-          placeholder="Type your name"
-        />
+        <Form.Control ref={nameRef} type="text" placeholder="Type your name" />
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -58,16 +56,37 @@ const Register = () => {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control ref={passwordRef} type="password" placeholder="Password" />
+          <Form.Control
+            ref={passwordRef}
+            type="password"
+            placeholder="Password"
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Check
+            onClick={() => setAgree(!agree)}
+            className={agree ? " text-primary" : " text-secondary"}
+            type="checkbox"
+            label="Accept our Terms and Conditions"
+          />
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
+        <Button 
+        disabled={!agree}
+         variant="primary w-50 mx-auto d-block my-4" type="submit">
+          Register
         </Button>
       </Form>
-      <p>Already have an account on Adventurous Travelling? <Link to="/login" className="text-primary pe-auto text-decoration-none " onClick={navigateLogin}>Login Here!</Link></p>
+      <p>
+        Already have an account on Adventurous Travelling?{" "}
+        <Link
+          to="/login"
+          className="text-primary pe-auto text-decoration-none "
+          onClick={navigateLogin}
+        >
+          Login Here!
+        </Link>
+      </p>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
